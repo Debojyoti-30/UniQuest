@@ -1,17 +1,19 @@
+// UnivPrograms.js
 import React from 'react';
 //import './UnivPrograms.css';
 
-const UnivPrograms = () => {
+const UnivPrograms = ({ programs }) => {
     return (
         <section id="programs">
             <h2>Featured Programs</h2>
             <div className="program-grid">
-                {/* Repeat for each program */}
-                <div className="program-card">
-                    <h3>Program Name</h3>
-                    <p>Brief description of the program.</p>
-                    <button>Learn More</button>
-                </div>
+                {programs.map((program, index) => (
+                    <div className="program-card" key={index}>
+                        <h3>{program.name}</h3>
+                        <p>{program.description}</p>
+                        <button>Learn More</button>
+                    </div>
+                ))}
             </div>
         </section>
     );

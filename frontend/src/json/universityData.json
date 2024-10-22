@@ -1,67 +1,210 @@
 [
-    {
-      "name": "Indian Institute of Technology, Bombay",
-      "location": "Mumbai, Maharashtra",
-      "qsRanking": 59,
-      "nirfRanking": 1,
-      "phoneNumber": "022 2572 2545",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNV3TffyfrOH4J_5wms17NEghMcl2PDM7pdQ&s",
-      "featured": true,
-      "reviews": {
-        "rating": 9.6,
-        "count": 42
-      }
+  {
+    "id": 1,
+    "name": "Indian Institute of Technology, Bombay",
+    "location": "Mumbai, Maharashtra",
+    "qsRanking": 59,
+    "nirfRanking": 1,
+    "phoneNumber": "022 2572 2545",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNV3TffyfrOH4J_5wms17NEghMcl2PDM7pdQ&s",
+    "featured": true,
+    "reviews": {
+      "rating": 9.6,
+      "count": 42
     },
-    {
-      "name": "Indian Institute of Technology Delhi",
-      "location": "Delhi, India",
-      "qsRanking": 185,
-      "nirfRanking": 2,
-      "phoneNumber": "+91-11-26597135",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNV3TffyfrOH4J_5wms17NEghMcl2PDM7pdQ&s",
-      "reviews": {
-          "rating": 4.7,
-          "count": 290
+    "founded": 1958,
+    "campusSize": "550 acres",
+    "notableAlumni": ["Nandan Nilekani", "Rajiv Lather", "Manohar Parrikar"],
+    "coursesOffered": [
+      "Computer Science and Engineering",
+      "Electrical Engineering",
+      "Mechanical Engineering"
+    ],
+    "about": {
+      "description": "IIT Bombay is recognized for its excellence in technical education and research, fostering innovation and leadership in science and technology. It has a diverse student body and a vibrant campus life.",
+      "history": "Founded in 1958, IIT Bombay was the second IIT established in India and has played a critical role in shaping the nation's scientific and technical landscape."
+    },
+    "programs": [
+      {
+        "name": "B.Tech in Computer Science",
+        "description": "This undergraduate program offers deep insights into computer systems, software development, and algorithms.",
+        "duration": "4 years",
+        "fees": "Rs. 1,50,000 per annum"
       },
-      "featured": false
-    },
-    {
-      "name": "Indian Institute of Technology, Kharagpur",
-      "location": "Kharagpur, West Bengal",
-      "qsRanking": 224,
-      "nirfRanking": 4,
-      "phoneNumber": "032 2225 5221",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNV3TffyfrOH4J_5wms17NEghMcl2PDM7pdQ&s",
-      "featured": true,
-      "reviews": {
-        "rating": 9.6,
-        "count": 42
+      {
+        "name": "M.Tech in Data Science",
+        "description": "This course is aimed at equipping students with skills in data processing, machine learning, and statistical analysis.",
+        "duration": "2 years",
+        "fees": "Rs. 2,00,000 per annum"
       }
+    ],
+    "admissions": {
+      "process": "Candidates must qualify for the JEE Advanced exam for undergraduate programs and GATE for postgraduate admissions.",
+      "deadlines": "Undergraduate admission deadlines are typically in May.",
+      "criteria": "Minimum of 75% in Class 12 exams or equivalent, along with JEE/GATE scores."
     },
-    {
-      "name": "Indian Institute of Technology, Kanpur",
-      "location": "Kanpur, Bihar",
-      "qsRanking": 225,
-      "nirfRanking": 5,
-      "phoneNumber": "032 2225 5220",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNV3TffyfrOH4J_5wms17NEghMcl2PDM7pdQ&s",
-      "featured": false,
-      "reviews": {
-        "rating": 9.5,
-        "count": 40
-      }
+    "research": {
+      "areas": ["Artificial Intelligence", "Quantum Computing", "Nanotechnology"],
+      "facilities": ["AI Research Lab", "Supercomputing Center", "Nanotechnology Lab"],
+      "partnerships": ["Microsoft Research", "Google AI"]
     },
-    {
-      "name": "National University of Singapore",
-      "location": "21 Lower Kent Ridge Rd, Singapore",
-      "qsRanking": 227,
-      "nirfRanking": 4,
-      "phoneNumber": "+91-512-2590151",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT59H4g62ys-lMF-b4wK2AfEfqX_Is3FvCwtQ&s",
-      "reviews": {
-          "rating": 4.5,
-          "count": 280
+    "campusLife": {
+      "hostels": "15 hostels, each with sports and cultural facilities",
+      "clubs": ["Robotics Club", "Drama Club", "Music Society"],
+      "events": ["Techfest", "Mood Indigo", "Entrepreneurship Summit"]
+    },
+    "placement": {
+      "topRecruiters": ["Google", "Microsoft", "Amazon"],
+      "avgSalary": "Rs. 18,00,000 per annum",
+      "placementPercentage": "95%"
+    },
+    "scholarships": [
+      {
+        "name": "Merit-cum-Means Scholarship",
+        "eligibility": "Based on academic performance and financial need.",
+        "amount": "Up to 50% fee waiver"
       },
-      "featured": true
+      {
+        "name": "Institute Free Studentship",
+        "eligibility": "Awarded to students from low-income families.",
+        "amount": "Full tuition waiver"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Indian Institute of Technology Delhi",
+    "location": "Delhi, India",
+    "qsRanking": 185,
+    "nirfRanking": 2,
+    "phoneNumber": "+91-11-26597135",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNV3TffyfrOH4J_5wms17NEghMcl2PDM7pdQ&s",
+    "featured": false,
+    "reviews": {
+      "rating": 4.7,
+      "count": 290
+    },
+    "founded": 1961,
+    "campusSize": "325 acres",
+    "notableAlumni": ["Vinod Khosla", "Raghuram Rajan"],
+    "coursesOffered": [
+      "Electrical Engineering",
+      "Civil Engineering",
+      "Biotechnology"
+    ],
+    "about": "IIT Delhi is one of the premier institutes of India, known for its cutting-edge research and innovative academic programs. It plays a critical role in building a foundation for India's scientific and technological progress.",
+    "programs": [
+      {
+        "name": "B.Tech in Electrical Engineering",
+        "description": "A comprehensive course focused on power systems, electronics, and telecommunications."
+      },
+      {
+        "name": "M.Tech in Biotechnology",
+        "description": "An interdisciplinary program blending biology and technology to innovate in healthcare and industry."
+      }
+    ],
+    "admissions": {
+      "process": "Admission through JEE Advanced for undergraduates and GATE for postgraduates.",
+      "deadlines": "The undergraduate application closes in May."
+    }
+  },
+  {
+    "id": 3,
+    "name": "Indian Institute of Technology, Kharagpur",
+    "location": "Kharagpur, West Bengal",
+    "qsRanking": 224,
+    "nirfRanking": 4,
+    "phoneNumber": "032 2225 5221",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNV3TffyfrOH4J_5wms17NEghMcl2PDM7pdQ&s",
+    "featured": true,
+    "reviews": {
+      "rating": 9.6,
+      "count": 42
+    },
+    "founded": 1951,
+    "campusSize": "2100 acres",
+    "notableAlumni": ["Sundar Pichai", "Arvind Kejriwal"],
+    "coursesOffered": [
+      "Aerospace Engineering",
+      "Mining Engineering",
+      "Architecture"
+    ],
+    "about": "IIT Kharagpur, the first of the IITs, is known for its extensive campus and diverse course offerings. It has played a pivotal role in shaping India's higher technical education landscape.",
+    "programs": [
+      {
+        "name": "B.Tech in Aerospace Engineering",
+        "description": "A specialized course covering aircraft and spacecraft design, aerodynamics, and propulsion."
+      }
+    ],
+    "admissions": {
+      "process": "Admission via JEE Advanced and GATE for undergraduate and postgraduate programs, respectively.",
+      "deadlines": "Applications for undergraduate courses close in May."
+    }
+  },
+  {
+    "id": 4,
+    "name": "Indian Institute of Technology, Kanpur",
+    "location": "Kanpur, Uttar Pradesh",
+    "qsRanking": 225,
+    "nirfRanking": 5,
+    "phoneNumber": "032 2225 5220",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNV3TffyfrOH4J_5wms17NEghMcl2PDM7pdQ&s",
+    "featured": false,
+    "reviews": {
+      "rating": 9.5,
+      "count": 40
+    },
+    "founded": 1959,
+    "campusSize": "1055 acres",
+    "notableAlumni": ["Narendra Patni", "Rakesh Gangwal"],
+    "coursesOffered": [
+      "Chemical Engineering",
+      "Materials Science",
+      "Mathematics"
+    ],
+    "about": "IIT Kanpur is renowned for its strong focus on science and engineering disciplines, with modern facilities and a strong research ecosystem.",
+    "programs": [
+      {
+        "name": "B.Tech in Chemical Engineering",
+        "description": "This program covers chemical reactions, process engineering, and materials science."
+      }
+    ],
+    "admissions": {
+      "process": "Entry is based on JEE Advanced for undergraduates and GATE for postgraduates.",
+      "deadlines": "Applications close in May for undergraduates."
+    }
+  },
+  {
+    "id": 5,
+    "name": "National University of Singapore",
+    "location": "21 Lower Kent Ridge Rd, Singapore",
+    "qsRanking": 227,
+    "nirfRanking": 4,
+    "phoneNumber": "+65 6516 6666",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT59H4g62ys-lMF-b4wK2AfEfqX_Is3FvCwtQ&s",
+    "featured": true,
+    "reviews": {
+      "rating": 4.5,
+      "count": 280
+    },
+    "founded": 1905,
+    "campusSize": "370 acres",
+    "notableAlumni": ["Goh Chok Tong", "Halimah Yacob"],
+    "coursesOffered": [
+      "Computer Science",
+      "Business Administration",
+      "Law"
+    ],
+    "about": "The National University of Singapore is a leading global university located in the heart of Asia, known for its high-quality research and strong academic reputation.",
+    "programs": [
+      {
+        "name": "Bachelor of Computing in Computer Science",
+        "description": "A globally recognized program with a focus on advanced computer systems, AI, and software development."
+      }
+    ],
+    "admissions": {
+      "process": "Admission is based on academic merit and standardized tests such as SAT, ACT, or IB.",
+      "deadlines": "Undergraduate application deadlines are in March."
+    }
   }
 ]

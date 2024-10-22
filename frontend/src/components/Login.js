@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
+
 function Login({ userType }) {
     const navigate = useNavigate();
     const [username, setUsername] = useState('');
@@ -10,17 +11,26 @@ function Login({ userType }) {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const response = await fetch(`http://localhost:5001/api/${userType}/auth/login`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ username, password }),
-        });
-
-        const data = await response.json();
-        if (response.ok) {
+        try {
+            const response = await fetch(`http://localhost:5001/api/${userType}/auth/login`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ username, password }),
+            });
+    
+            if (!response.ok) {
+                const data = await response.json();
+                setMessage(data.message);
+                /*setMessage(data.message || 'Login failed. Please try again.');*/
+                return;
+            }
+    
             setMessage('Login successful! Redirecting...');
+            const data = await response.json();
+            console.log(data);
+    
             // Redirect to the appropriate dashboard
             if (userType === 'admin') {
                 navigate('/admin-dashboard');
@@ -29,10 +39,13 @@ function Login({ userType }) {
             } else if (userType === 'student') {
                 navigate('/student-dashboard');
             }
-        } else {
-            setMessage(data.message || 'Login failed. Please try again.');
+    
+        } catch (error) {
+            setMessage('Failed to connect to the server. Please try again later.');
+            console.error('Error:', error);
         }
     };
+    
 
     return (
         <div>

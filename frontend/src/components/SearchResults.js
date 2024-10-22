@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import universityData from '../json/universityData.json';
+<<<<<<< HEAD
 import Chatbot from './Chatbot'; // Import the Chatbot component
+=======
+import { Link } from 'react-router-dom';
+>>>>>>> 4809b015e8b636a24b2781a8d42db6d33e376aaa
 
 const SearchResults = () => {
     // State to store universities (since there's no fetching, we set it directly)
@@ -201,6 +205,7 @@ const SearchResults = () => {
                         </div>
                     </aside>
 
+<<<<<<< HEAD
                     {/* University Listings Section */}
                     <main className={`w-3/4 p-4 ${viewMode === 'grid' ? 'grid grid-cols-2 gap-4' : 'flex flex-col'}`}>
                         {filteredUniversities.map((university, index) => (
@@ -212,6 +217,50 @@ const SearchResults = () => {
                                 <button className="bg-blue-500 text-white px-4 py-2 rounded mt-4">View Details</button>
                             </div>
                         ))}
+=======
+                    {/* University Listings */}
+                    <main className="w-3/4 p-4">
+                        <div className={`grid gap-4 ${viewMode === 'grid' ? 'grid-cols-3' : ''}`}>
+                            {filteredUniversities.map((university, index) => (
+                                <div key={index} className={`border rounded-lg p-4 ${viewMode === 'list' ? 'flex space-x-4' : ''}`}>
+                                    <div>
+                                        <img
+                                            src={university.image}
+                                            alt={university.name}
+                                            //className="w-full h-40 object-cover rounded-md"
+                                            style={{ width: '300px', height: '200px', objectFit: 'cover' }} // Ensures a consistent aspect ratio
+                                        />
+                                    </div>
+                                    <div className="flex-1">
+                                        <h2 className="text-xl font-bold"><Link to={`/univproftest/${university.id}`}>{university.name}</Link>
+                                        {university.featured && (
+                                            <span className="bg-yellow-300 text-yellow-800 font-bold px-2 py-1 rounded ml-2">
+                                                Featured
+                                            </span>
+                                        )}
+                                        </h2>
+                                        <p className="text-gray-600 mb-2">{university.location}</p>
+                                        <div className="mb-2">
+                                            <span className="font-semibold">QS Ranking: </span>
+                                            <span>{university.qsRanking}</span>
+                                        </div>
+                                        <div className="mb-2">
+                                            <span className="font-semibold">NIRF Ranking: </span>
+                                            <span>{university.nirfRanking}</span>
+                                        </div>
+                                        <div className="mb-2">
+                                            <span className="font-semibold">Phone Number: </span>
+                                            <span>{university.phoneNumber}</span>
+                                        </div>
+                                        <div className="flex items-center space-x-2">
+                                            <i className="fas fa-star text-yellow-500"></i>
+                                            <span>{university.reviews.rating} ({university.reviews.count} reviews)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+>>>>>>> 4809b015e8b636a24b2781a8d42db6d33e376aaa
                     </main>
                 </div>
             </div>

@@ -46,7 +46,7 @@
     "postcss": "^8.4.47",
     "tailwindcss": "^3.4.13"
   },
-  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "description": "This project is online university admission web-app.",
   "main": "postcss.config.js",
   "keywords": [],
   "author": "",

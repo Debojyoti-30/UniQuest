@@ -12,7 +12,11 @@ import '../styles/UnivProfile.css'; // Importing the CSS file
 import ScholarshipPortal from './ScholarshipPortal';
 import { useLocation } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
+<<<<<<< HEAD
 import Chatbot from './Chatbot'; // Import the Chatbot component
+=======
+import universityData from '../json/universityData.json';
+>>>>>>> 4809b015e8b636a24b2781a8d42db6d33e376aaa
 
 const UniversityProfile = () => {
     const location = useLocation();
