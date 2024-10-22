@@ -1,0 +1,32 @@
+.profileContainer {
+    padding: 20px;
+    max-width: 600px;
+    margin: auto;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.profileTitle {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sectionTitle {
+    margin-top: 20px;
+    font-size: 1.5rem;
+}
+
+.editButton {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50; /* Green */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.editButton:hover {
+    background-color: #45a049; /* Darker green */
+}

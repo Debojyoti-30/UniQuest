@@ -25,7 +25,7 @@ const SalesOverview = () => {
             <div className={styles.uploadBody}>
             <h1 className={styles.uploadTitle}>University Registration Document Upload</h1>
             <div className={styles.uploadContainer}>
-                <section className={styles.uploadSection}>
+                {/*<section className={styles.uploadSection}>
                     <h2 className={styles.uploadHeader}>Required Documents</h2>
                     <ul className={styles.uploadList}>
                         <li className={styles.uploadItem}>Transcripts</li>
@@ -38,7 +38,7 @@ const SalesOverview = () => {
                         <li className={styles.uploadItem}>GRE/GMAT Scores</li>
                         <li className={styles.uploadItem}>Portfolio (for Art/Design courses)</li>
                     </ul>
-                </section>
+                </section>*/}
 
                 <section className={styles.uploadForm}>
                     <h2 className={styles.uploadHeader}>Upload Your Documents</h2>

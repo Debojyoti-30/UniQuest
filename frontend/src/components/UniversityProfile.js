@@ -12,6 +12,7 @@ import '../styles/UnivProfile.css'; // Importing the CSS file
 import ScholarshipPortal from './ScholarshipPortal';
 import { useLocation } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
+import Chatbot from './Chatbot'; // Import the Chatbot component
 
 const UniversityProfile = () => {
     const location = useLocation();
@@ -136,6 +137,10 @@ const UniversityProfile = () => {
                 {renderPage()}
             </main>
             <UnivFooter />
+            {/* Add the Chatbot component here */}
+            <div className="fixed bottom-5 right-5">
+                <Chatbot />
+            </div>
         </div>
     );
 };

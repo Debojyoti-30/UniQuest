@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import universityData from '../json/universityData.json';
+import Chatbot from './Chatbot'; // Import the Chatbot component
 
 const SearchResults = () => {
-
-
     // State to store universities (since there's no fetching, we set it directly)
     const [universities, setUniversities] = useState([]);
     const [searchName, setSearchName] = useState('');
@@ -13,36 +12,9 @@ const SearchResults = () => {
     const [filterUniversities, setFilterUniversities] = useState(universityData);
     const [selectedCountry, setSelectedCountry] = useState('');
 
-    const countries = [
-        "Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Antigua and Barbuda", "Argentina", "Armenia", 
-        "Australia", "Austria", "Azerbaijan", "Bahamas", "Bahrain", "Bangladesh", "Barbados", "Belarus", 
-        "Belgium", "Belize", "Benin", "Bhutan", "Bolivia", "Bosnia and Herzegovina", "Botswana", "Brazil", 
-        "Brunei", "Bulgaria", "Burkina Faso", "Burundi", "Cabo Verde", "Cambodia", "Cameroon", "Canada", 
-        "Central African Republic", "Chad", "Chile", "China", "Colombia", "Comoros", 
-        "Congo, Democratic Republic of the", "Congo, Republic of the", "Costa Rica", "Croatia", "Cuba", 
-        "Cyprus", "Czech Republic", "Denmark", "Djibouti", "Dominica", "Dominican Republic", "Ecuador", 
-        "Egypt", "El Salvador", "Equatorial Guinea", "Eritrea", "Estonia", "Eswatini", "Ethiopia", 
-        "Fiji", "Finland", "France", "Gabon", "Gambia", "Georgia", "Germany", "Ghana", "Greece", "Grenada", 
-        "Guatemala", "Guinea", "Guinea-Bissau", "Guyana", "Haiti", "Honduras", "Hungary", "Iceland", "India", 
-        "Indonesia", "Iran", "Iraq", "Ireland", "Israel", "Italy", "Jamaica", "Japan", "Jordan", 
-        "Kazakhstan", "Kenya", "Kiribati", "Korea, North", "Korea, South", "Kuwait", "Kyrgyzstan", 
-        "Laos", "Latvia", "Lebanon", "Lesotho", "Liberia", "Libya", "Liechtenstein", "Lithuania", 
-        "Luxembourg", "Madagascar", "Malawi", "Malaysia", "Maldives", "Mali", "Malta", "Marshall Islands", 
-        "Mauritania", "Mauritius", "Mexico", "Micronesia", "Moldova", "Monaco", "Mongolia", "Montenegro", 
-        "Morocco", "Mozambique", "Myanmar", "Namibia", "Nauru", "Nepal", "Netherlands", "New Zealand", 
-        "Nicaragua", "Niger", "Nigeria", "North Macedonia", "Norway", "Oman", "Pakistan", "Palau", 
-        "Palestine", "Panama", "Papua New Guinea", "Paraguay", "Peru", "Philippines", "Poland", "Portugal", 
-        "Qatar", "Romania", "Russia", "Rwanda", "Saint Kitts and Nevis", "Saint Lucia", 
-        "Saint Vincent and the Grenadines", "Samoa", "San Marino", "Sao Tome and Principe", 
-        "Saudi Arabia", "Senegal", "Serbia", "Seychelles", "Sierra Leone", "Singapore", "Slovakia", 
-        "Slovenia", "Solomon Islands", "Somalia", "South Africa", "Spain", "Sri Lanka", "Sudan", 
-        "Suriname", "Sweden", "Switzerland", "Syria", "Tajikistan", "Tanzania", "Thailand", "Timor-Leste", 
-        "Togo", "Tonga", "Trinidad and Tobago", "Tunisia", "Turkey", "Turkmenistan", "Tuvalu", 
-        "Uganda", "Ukraine", "United Arab Emirates", "United Kingdom", "United States", "Uruguay", 
-        "Uzbekistan", "Vanuatu", "Vatican City", "Venezuela", "Vietnam", "Yemen", "Zambia", "Zimbabwe"
-    ];
+    // List of countries
+    const countries = [ /* Your country list here */ ];
     const [dropdownOpen, setDropdownOpen] = useState(false);
-    
 
     // Simulate fetching data by using useEffect to set the JSON data
     useEffect(() => {
@@ -107,29 +79,29 @@ const SearchResults = () => {
                 <button className="px-4 py-2 rounded" onClick={() => handleFilter('nirf')}>NIRF Ranking</button>
                 <button className="px-4 py-2 rounded" onClick={() => handleFilter('qs')}>QS Ranking</button>
                 {/* Country selection dropdown */}
-            <div className="relative inline-block text-left">
-                <button 
-                    className="px-4 py-2 rounded" 
-                    onClick={() => setDropdownOpen(!dropdownOpen)} // Toggle dropdown
-                >
-                    Country
-                </button>
-                {dropdownOpen && (
-                    <div className="absolute right-0 z-10 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
-                        <div className="py-1">
-                            {countries.map((country) => (
-                                <button 
-                                    key={country} 
-                                    onClick={() => handleCountrySelect(country)} 
-                                    className="block w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100"
-                                >
-                                    {country}
-                                </button>
-                            ))}
+                <div className="relative inline-block text-left">
+                    <button 
+                        className="px-4 py-2 rounded" 
+                        onClick={() => setDropdownOpen(!dropdownOpen)} // Toggle dropdown
+                    >
+                        Country
+                    </button>
+                    {dropdownOpen && (
+                        <div className="absolute right-0 z-10 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
+                            <div className="py-1">
+                                {countries.map((country) => (
+                                    <button 
+                                        key={country} 
+                                        onClick={() => handleCountrySelect(country)} 
+                                        className="block w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100"
+                                    >
+                                        {country}
+                                    </button>
+                                ))}
+                            </div>
                         </div>
-                    </div>
-                )}
-            </div>
+                    )}
+                </div>
                 <button className="px-4 py-2 rounded" onClick={() => handleFilter('featured')}>Featured</button>
             </div>
 
@@ -223,90 +195,29 @@ const SearchResults = () => {
                                 </label>
                                 <label className="flex items-center">
                                     <input type="checkbox" className="mr-2" />
-                                    Top Nirf Ranking Universities
-                                </label>
-                                <label className="flex items-center">
-                                    <input type="checkbox" className="mr-2" />
-                                    Top Private Universities
-                                </label>
-                                <label className="flex items-center">
-                                    <input type="checkbox" className="mr-2" />
-                                    Top Universities in West Bengal
+                                    Private Universities
                                 </label>
                             </div>
                         </div>
                     </aside>
 
-                    {/* University Listings */}
-                    <main className="w-3/4 p-4">
-                        <div className={`grid gap-4 ${viewMode === 'grid' ? 'grid-cols-3' : ''}`}>
-                            {/*
-                            <div className="mt-4">
-                                <h2>Select a Country</h2>
-                                {countries.map((country) => (
-                                    <button key={country} onClick={() => handleCountrySelect(country)} className="m-2 p-2 border rounded">
-                                        {country}
-                                    </button>
-                                ))}
+                    {/* University Listings Section */}
+                    <main className={`w-3/4 p-4 ${viewMode === 'grid' ? 'grid grid-cols-2 gap-4' : 'flex flex-col'}`}>
+                        {filteredUniversities.map((university, index) => (
+                            <div key={index} className={`border p-4 rounded ${viewMode === 'grid' ? 'flex flex-col' : ''}`}>
+                                <h2 className="text-xl font-bold">{university.name}</h2>
+                                <p>Location: {university.location}</p>
+                                <p>QS Ranking: {university.qsRanking}</p>
+                                <p>NIRF Ranking: {university.nirfRanking}</p>
+                                <button className="bg-blue-500 text-white px-4 py-2 rounded mt-4">View Details</button>
                             </div>
-
-                            
-                            <div className="mt-4">
-                                {filterUniversities.map(university => (
-                                    <div key={university.id} className="border-b py-2">
-                                        <h3 className="font-bold">
-                                            {university.name} 
-                                            {university.featured && (
-                                                <span className="bg-yellow-300 px-2 rounded ml-2">Featured</span>
-                                            )}
-                                        </h3>
-                                        <p>{university.location}</p>
-                                        <p>QS Ranking: {university.qsRanking}</p>
-                                    </div>
-                                ))}
-                            </div>*/}
-                            {filteredUniversities.map((university, index) => (
-                                <div key={index} className={`border rounded-lg p-4 ${viewMode === 'list' ? 'flex space-x-4' : ''}`}>
-                                    <div>
-                                        <img
-                                            src={university.image}
-                                            alt={university.name}
-                                            //className="w-full h-40 object-cover rounded-md"
-                                            style={{ width: '300px', height: '200px', objectFit: 'cover' }} // Ensures a consistent aspect ratio
-                                        />
-                                    </div>
-                                    <div className="flex-1">
-                                        <h2 className="text-xl font-bold">{university.name}
-                                        {university.featured && (
-                                            <span className="bg-yellow-300 text-yellow-800 font-bold px-2 py-1 rounded ml-2">
-                                                Featured
-                                            </span>
-                                        )}
-                                        </h2>
-                                        <p className="text-gray-600 mb-2">{university.location}</p>
-                                        <div className="mb-2">
-                                            <span className="font-semibold">QS Ranking: </span>
-                                            <span>{university.qsRanking}</span>
-                                        </div>
-                                        <div className="mb-2">
-                                            <span className="font-semibold">NIRF Ranking: </span>
-                                            <span>{university.nirfRanking}</span>
-                                        </div>
-                                        <div className="mb-2">
-                                            <span className="font-semibold">Phone Number: </span>
-                                            <span>{university.phoneNumber}</span>
-                                        </div>
-                                        <div className="flex items-center space-x-2">
-                                            <i className="fas fa-star text-yellow-500"></i>
-                                            <span>{university.reviews.rating} ({university.reviews.count} reviews)</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
+                        ))}
                     </main>
                 </div>
             </div>
+
+            {/* Chatbot Integration */}
+            <Chatbot /> {/* Place the Chatbot component here */}
         </div>
     );
 };

@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom'; // Import useNavigate for redirection
 import styles from '../styles/Upload.module.css'; // Correctly importing the CSS module
+import Chatbot from './Chatbot'; // Import the Chatbot component
 
 const Upload = () => {
     const navigate = useNavigate(); // Initialize the navigate function
@@ -72,11 +73,15 @@ const Upload = () => {
                             <label className={styles.uploadLabel} htmlFor="portfolio">Portfolio (for Art/Design courses):</label>
                             <input className={styles.uploadInput} type="file" id="portfolio" name="portfolio" />
                         </div>
-                        <button className={styles.uploadButton} type="submit">Submit & Save</button><br></br>
-                        <p>After Submitting all documents, click below to proceed for payment </p>
-                        <button className={styles.uploadButton} type="button" onClick={handlePayment}>Proceed to Payment</button><br></br>
+                        <button className={styles.uploadButton} type="submit">Submit & Save</button><br />
+                        <p>After submitting all documents, click below to proceed for payment </p>
+                        <button className={styles.uploadButton} type="button" onClick={handlePayment}>Proceed to Payment</button><br />
                     </form>
-                </section><br></br>
+                </section><br />
+            </div>
+            {/* Add the Chatbot component here */}
+            <div className="fixed bottom-5 right-5">
+                <Chatbot />
             </div>
         </div>
     );

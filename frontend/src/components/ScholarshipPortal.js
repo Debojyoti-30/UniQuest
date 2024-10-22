@@ -1,6 +1,7 @@
 // ScholarshipPortal.js (React Component)
 import React from "react";
 import "../styles/ScholarshipPortal.module.css"; // External CSS or inline styles can remain unchanged
+import Chatbot from './Chatbot'; // Make sure to import your Chatbot component
 
 const ScholarshipCard = ({ featured, daysToGo, logo, title, award, eligibility, lastUpdated }) => {
     return (
@@ -88,7 +89,6 @@ const ScholarshipPortal = () => {
             <header className="bg-white shadow">
                 <div className="container mx-auto px-4 py-4 flex justify-between items-center">
                     <div className="flex items-center">
-                        {/*<img src="https://placehold.co/50x50" alt="Buddy4Study Logo" className="mr-2" />*/}
                         <span className="text-3xl font-bold px-1">UniScholar</span>
                     </div>
                     <nav className="flex space-x-4">
@@ -191,6 +191,10 @@ const ScholarshipPortal = () => {
                         ))}
                     </div>
                 </main>
+            </div>
+            {/* Add the Chatbot component here */}
+            <div className="fixed bottom-5 right-5">
+                <Chatbot />
             </div>
         </div>
     );

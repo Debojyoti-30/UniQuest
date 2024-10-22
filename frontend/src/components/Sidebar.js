@@ -40,21 +40,17 @@ const Sidebar = () => {
                                 Virtual Reality
                             </a>
                         </li>
-                        {/*<li className={styles.menuItem}>
-                            <a href="/rtl" className={styles.menuLink}>
-                                <i className={`fas fa-sync-alt ${styles.menuIcon}`}></i>
-                                RTL
-                            </a>
-                        </li>*/}
+
+                        {/* Account Pages Section */}
                         <h3 className={styles.sectionHeader}>Account Pages</h3>
                         <li className={styles.menuItem}>
-                            <a href="/rtl" className={styles.menuLink}>
+                            <a href="/profile" className={styles.menuLink}> {/* Updated link */}
                                 <i className={`fas fa-user ${styles.menuIcon}`}></i>
                                 Profile
                             </a>
                         </li>
                         <li className={styles.menuItem}>
-                            <a href="/rtl" className={styles.menuLink}>
+                            <a href="/sign-up" className={styles.menuLink}>
                                 <i className={`fas fa-user-plus ${styles.menuIcon}`}></i>
                                 Sign Up Now
                             </a>
@@ -64,7 +60,7 @@ const Sidebar = () => {
             </div>
             <br></br>
 
-            {/* Need Help Section at the bottom */}
+            {/* Need Help Section */}
             <div className={styles.helpSection}>
                 <p className={styles.helpText}>Need help?</p>
                 <button className={styles.helpButton}>Documentation</button>
