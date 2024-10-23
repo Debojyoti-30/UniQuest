@@ -1,0 +1,43 @@
+.infoCardContainer {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.infoCardContainer:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.infoCardTitle {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.infoCardSubtitle {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.infoCardText {
+    font-size: 16px;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.infoCardLink {
+    font-size: 16px;
+    color: #6a0dad;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.infoCardLink:hover {
+    color: #9b30ff;
+    text-decoration: underline;
+}
