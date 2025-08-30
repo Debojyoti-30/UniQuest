@@ -1,4 +1,4 @@
-#🎓 UniQuest – One Stop Solution for University Admission
+🎓 UniQuest – One Stop Solution for University Admission
 
 UniQuest is a modern, all-in-one platform designed to simplify and streamline the university admission process for students, institutions, and administrators. From application submissions to document verification, communication, and tracking, UniQuest provides a seamless experience in one place.
 
